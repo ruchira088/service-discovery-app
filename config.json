@@ -1,0 +1,10 @@
+{
+  "reconnectionAttemptDelay": 3000,
+  "httpPort": 8008,
+  "database": {
+    "protocol": "mongodb",
+    "host": "mongo",
+    "port": 27017,
+    "dbName": "microservicesApp"
+  }
+}

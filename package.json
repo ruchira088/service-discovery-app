@@ -1,0 +1,21 @@
+{
+  "name": "service-discovery",
+  "version": "0.0.1",
+  "description": "Service discovery",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon --debug=5868 .",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ruchira Jayasekara <ruchira088@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongodb": "^2.2.24"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
