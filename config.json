@@ -5,6 +5,15 @@
     "protocol": "mongodb",
     "host": "mongo",
     "port": 27017,
-    "dbName": "microservicesApp"
+    "dbName": "microservicesApp",
+    "collectionName": "service-ping"
+  },
+  "messageBus": {
+    "host": "192.168.1.88",
+    "port": 2181,
+    "servicePing": {
+      "topic": "service-ping",
+      "partition": 0
+    }
   }
 }

@@ -2,6 +2,7 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const http = require("http")
 const {connectToDB} = require("./libs/database")
+const {listenToMessages} = require("./libs/services")
 const {PATH, getServicesRouter} = require("./routes/services")
 const config = require("../config.json")
 const packageDetails = require("../package.json")
@@ -19,7 +20,10 @@ app.get("/details", (request, response) => {
 })
 
 connectToDB()
-    .then(db => {
+    .then(db =>
+    {
+        listenToMessages({db})
+
         app.use(PATH, getServicesRouter({db}))
 
         http.createServer(app).listen(PORT, () => {
